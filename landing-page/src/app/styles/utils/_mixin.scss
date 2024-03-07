@@ -1,0 +1,20 @@
+@use "sass:map";
+@import './variables';
+
+@mixin mq ($key) {
+    @if map.has-key($breakpoints, $key) {
+
+      $size : map.get($breakpoints, $key);
+
+  
+      @media (min-width: $size) {
+        @debug "Min-width media query for #{$key} applied.";
+        @content;
+      }
+    } @else {
+      @media (max-width: 1px) {
+        @debug "Max-width media query fallback applied for #{$key}.";
+        @content;
+      }
+    }
+  }

@@ -1,0 +1,35 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: $primary-color;
+    padding-top: 35px;
+
+    .text-container {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+  
+      h3 {
+        font-size: 40px;
+        @include mq(m) {
+          font-size: 50px;
+          margin-bottom: 60px;
+        }
+      }
+  
+      p {
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        font-size: 25px;
+        margin-bottom: 80px;
+        @include mq(m) {
+            width: 50%;
+            font-size: 35px;
+          }
+      } 
+    }
+  }
+  

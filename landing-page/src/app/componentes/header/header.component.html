@@ -1,0 +1,30 @@
+<header>
+    <div class="header-top-container">
+        <!--* Quando for editar troque pelo logo da empresa *-->
+      <img
+      class="logo"
+      src="https://freeiconshop.com/wp-content/uploads/edd/image-outline-filled.png"
+      alt="logo">
+      <button (click)="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <nav class="nav" [ngClass]="{'visible': isMenuVisible}">
+        <ul class="menu">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contacts">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="icon-container">
+        <!--* Quando for editar troque pelos links da empresa *-->
+        <ul>
+            <li>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/?locale=pt_BR"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+        </ul>
+    </div>
+</header>

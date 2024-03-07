@@ -1,0 +1,41 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: $primary-color;
+    font-size: 15px;
+    width: 100%;
+    background-color: $secondary-color;
+    @include mq(m) {
+        font-size: 20px;
+    }
+    .text-footer {
+        width: 80%;
+        a {
+          text-decoration: none;
+          color: $primary-color;
+          font-weight: 900;
+          &:hover {
+            font-size: 19px;
+          }
+        }
+    }
+    .icons-footer {
+        display: flex;
+        font-size: 35px;
+        ul {
+          display: flex;
+          i {
+            color: $third-color;
+            margin-right: 10px;
+            &:hover{
+              color: $primary-color;
+            }
+          }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $third-color; //mudar conforme necessidade
+    padding-top: 35px;
+    font-size: 25px;
+  
+    .title {
+      font-size: 40px;
+      margin-bottom: 30px;
+
+  
+      @include mq(m) {
+        font-size: 50px;
+        margin-bottom: 60px;
+      }
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  
+      label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 86%;
+        @include mq(m) {
+            width: 40%;
+          }
+        }
+
+        .input {
+          height: 28px;
+          @include mq(m) {
+            height: 40px;
+          }
+        }
+  
+        input,
+        textarea {
+          margin-top: 5px;
+          font-size: 25px;
+        }
+      
+      }
+
+      button {
+        width: 150px;
+        height: 70px;
+        border-radius: 10px;
+        font-size: 25px;
+        color: $third-color;
+        background-color: $secondary-color;
+        margin-bottom: 35px;
+        &:hover {
+            background-color: $secondary-color;
+            color: $primary-color;
+          }
+          &:active {
+            background-color: $fifth-color;
+            color: $third-color;
+          }
+      }
+    }
+  
