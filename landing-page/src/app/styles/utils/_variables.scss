@@ -1,12 +1,12 @@
-$primary-color : SlateGrey;
+$primary-color : rgba(38, 37, 118, 0.9);
 
-$secondary-color : DarkSlateGray;
+$secondary-color : #4fd3f7;
 
-$third-color : LightGray;
+$third-color : #ffffff;
 
-$fourth-color : #465F5F;
+$fourth-color : #fa84ec;
 
-$fifth-color : Darkgrey;
+$fifth-color : #f6e66b;
 
 $breakpoints : (
   "s": 576px,
@@ -14,3 +14,4 @@ $breakpoints : (
   "l": 992px,
   "xs": 1250px,
 );
+

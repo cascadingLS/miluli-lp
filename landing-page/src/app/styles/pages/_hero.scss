@@ -1,9 +1,17 @@
+
 .hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 150px;
-  background-color: $third-color; //mudar conforme necessidade
+  font-family: "Righteous", sans-serif;
+  color: $third-color;
+  background-color: $primary-color;
+  --mask:
+    radial-gradient(82.29px at 50% calc(100% - 116.1px),#000 99%,#0000 101%) calc(50% - 108px) 0/216px 100%,
+    radial-gradient(82.29px at 50% calc(100% + 62.1px),#0000 99%,#000 101%) 50% calc(100% - 54px)/216px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
   @include mq(m) {
     padding-top: 100px;
     width: 100%;
@@ -17,16 +25,33 @@
     }
     .text-container {
       display: flex;
+      width: 90%;
+      margin: auto;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      @include mq(m) {
+        width: 65%;
+
+      }
       h1 {
+        padding-top: 80px;
         font-size: 25px;
         margin-bottom: 10px;
+        .mi{
+          color: $secondary-color;
+        }
+        .lu {
+          color: $fifth-color;
+        }
+        .li {
+          color: $fourth-color;
+        }
       }
       h2 {
           width: 90%;
           font-size: 35px;
+          color: $fifth-color;
           margin-bottom: 15px;
         }
       
@@ -34,6 +59,9 @@
         width: 90%;
         font-size: 20px;
         margin-bottom: 15px;
+        @include mq(m) {
+          font-size: 25px;
+        }
       }
       
       button {
@@ -44,7 +72,7 @@
         font-weight: 900;
         width: 200px;
         height: 70px;
-        color: $fifth-color;
+        color: $third-color;
         margin-bottom: 25px;
         &:hover {
           background-color: $secondary-color;
@@ -62,10 +90,19 @@
     display: flex;
     @include mq(m) {
       width: 50%;
+      border-radius: 19px 20% 20%;
     }
     img {
       align-self: center;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      @include mq(m) {
+        border-radius: 80% 0% 0%  0%;
+        opacity: 0.7;
+        border: 2px solid $secondary-color;
+      }
     }
   }
  

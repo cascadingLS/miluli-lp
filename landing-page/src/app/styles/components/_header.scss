@@ -4,15 +4,16 @@ header {
   align-items:  center ;
   flex-direction: column;
   justify-content: center;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   position: fixed; 
+  font-family: "Righteous", sans-serif;
   width: 100%;
   padding-top: 30px;
+  opacity: 0.8;
   padding-bottom: 20px;
 
   @include mq(m) {
     justify-content: space-between;
-
     flex-direction: row; 
     height: 100px;
     padding: 0px;
@@ -41,7 +42,7 @@ header {
         }
 
     .logo {
-      width: 60px;
+      width: 200px;
       margin-left: 50px;
       @include mq(m) {
         margin-left: 50px;
