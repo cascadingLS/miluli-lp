@@ -16,14 +16,14 @@
   @include mq(m) {
     padding-top: 100px;
     width: 100%;
-    height: 750px;
+    height: 790px;
     flex-direction: row;
     justify-content: space-between;
   }
   .left-container {
     @include mq(m) {
       width: 50%;
-      align-self: center;
+      padding-top: 50px;
     }
     .text-container {
       display: flex;
@@ -91,21 +91,152 @@
   .right-container {
     display: flex;
     @include mq(m) {
-      width: 50%;
+      width: 50%;      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       border-radius: 19px 20% 20%;
     }
-    img {
+    .hero-images-top {
+      display: flex;
+      flex-direction: row;
+    }
+    .hero-images-bottom {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      flex-direction: row;
+    }
+    .rotate-1 {
+      transform: rotate(90deg);
+    }
+
+    .img-hero {
+      @include mq(m) {
+        width: 300px;
+        height: 300px;
+        aspect-ratio:1;
+        display:inline-block;
+        --g: 6px;   /* control the gap */
+        --r: 42px;  /* control the circular shapes */
+        background: 
+          radial-gradient(var(--r) at left 50% bottom var(--r),green 95%,#0000),
+          radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%,#0000 95%,red) 
+            top/100% calc(100% - var(--r)) no-repeat;
+            img {
+              border: 10px solid $secondary-color;
+
+              --g: 6px;   /* control the gap */
+              --r: 42px;  /* control the circular shapes */
+              --_m: 
+                radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%,#0000 95%,#000) 
+                  top/100% calc(100% - var(--r)) no-repeat, 
+                radial-gradient(var(--r) at left 50% bottom var(--r),#000 95%,#0000);
+              -webkit-mask: var(--_m);
+                      mask: var(--_m);
+            
+            }
+      }
+    }
+
+    .right-top-jigsaw {
+      @include mq(m) {
+        width: 300px;
+        height: 300px;
+        aspect-ratio: 1;
+        display: inline-block;
+        --g: 6px;   /* control the gap */
+        --r: 42px;  /* control the circular shapes */
+        background: 
+          radial-gradient(var(--r) at left 50% bottom var(--r), green 95%, #0000),
+          radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, red) 
+            top/100% calc(100% - var(--r)) no-repeat;
+        transform: rotate(90deg); /* Adiciona rotação de 90 graus */
+        
+        img {
+          --g: 6px;   /* control the gap */
+          --r: 42px;  /* control the circular shapes */
+          --_m: 
+            radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, #000) 
+              top/100% calc(100% - var(--r)) no-repeat, 
+            radial-gradient(var(--r) at left 50% bottom var(--r), #000 95%, #0000);
+          -webkit-mask: var(--_m);
+          mask: var(--_m);
+        }
+      }
+    
+      &.right-top-jigsaw {
+        @include mq(m) {
+          width: 270px; /* Ajuste conforme necessário para encaixar no da direita */
+          height: 300px;
+          aspect-ratio: 1;
+          display: inline-block;
+          border: 1px solid blue;
+          --g: 6px;   /* control the gap */
+          --r: 42px;  /* control the circular shapes */
+          background: 
+            radial-gradient(var(--r) at left 50% bottom var(--r), $fourth-color 95%, #0000),
+            radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, red) 
+              top/100% calc(100% - var(--r)) no-repeat;
+          transform: rotate(90deg); /* Adiciona rotação de 90 graus */
+          
+          img {
+            border: 10px solid $fourth-color;
+            width: 270px;
+            --g: 6px;   /* control the gap */
+            --r: 42px;  /* control the circular shapes */
+            --_m: 
+              radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, #000) 
+                top/100% calc(100% - var(--r)) no-repeat, 
+              radial-gradient(var(--r) at left 50% bottom var(--r), #000 95%, #0000);
+            -webkit-mask: var(--_m);
+            mask: var(--_m);
+          }
+        }
+      }
+    }
+
+    .right-bottom-jigsaw {
+      @include mq(m) {
+        @include mq(m) {
+          width: 290px;
+          height: 280px;
+          aspect-ratio: 1;
+          display: inline-block;
+          --g: 6px;   /* control the gap */
+          --r: 42px;  /* control the circular shapes */
+          background: 
+            radial-gradient(var(--r) at left 50% top var(--r), $fifth-color 95%, #0000),
+            radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, red) 
+              bottom/100% calc(100% - var(--r)) no-repeat;
+      
+          img {
+            border: 10px solid $fifth-color;
+            --g: 6px;   /* control the gap */
+            --r: 42px;  /* control the circular shapes */
+            --_m: 
+              radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, #000) 
+                bottom/100% calc(100% - var(--r)) no-repeat, 
+              radial-gradient(var(--r) at left 50% top var(--r), #000 95%, #0000);
+            -webkit-mask: var(--_m);
+            mask: var(--_m);
+          }
+        }
+      }
+    }
+    .jig-img {
       align-self: center;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
-      @include mq(m) {
-        border-radius: 80% 0% 0%  0%;
-        opacity: 0.7;
-        border: 2px solid $secondary-color;
-      }
     }
+  }
+  .ukulele {
+    width: 200px;
+    align-self: center;
+    justify-self: center;
   }
  
 }
