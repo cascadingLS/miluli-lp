@@ -2,3 +2,18 @@
     padding: 0px;
     margin: 0px;
 }
+
+@import '../src/app/styles/utils/variables';
+@import '../src/app/styles/utils//mixin';
+
+// Components
+@import '../src/app/styles/components/header';
+@import '../src/app/styles/components/footer';
+
+// Pages
+@import '../src/app/styles/pages/hero';
+@import '../src/app/styles/pages/about';
+@import '../src/app/styles/pages/contacts';
+
+
+
