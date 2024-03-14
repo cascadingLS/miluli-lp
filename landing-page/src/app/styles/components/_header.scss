@@ -83,18 +83,19 @@ header {
         justify-content: space-around;
 
         li {
+          margin-right: 45px; 
           a{
             text-decoration: none;
             color: $third-color;
+            &:hover {
+              color: $fifth-color;
+            }
+            &:active {
+              color: $hover-fifth-color;
+            }
           }
-          margin-right: 45px; 
-          &:hover {
-            background-color: $primary-color;
           }
-          &:active {
-            background-color: $fourth-color;
-          }
-        }
+          
       }
     }
   }
@@ -133,8 +134,11 @@ header {
         i {
           color: $third-color;
           margin-right: 10px;
-          &:hover{
-            color: $primary-color;
+          &:hover {
+            color: $fifth-color;
+          }
+          &:active {
+            color: $hover-fifth-color;
           }
         }
       }
