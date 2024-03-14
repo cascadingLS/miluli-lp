@@ -16,8 +16,8 @@
     align-items: flex-start ;
   }
   --mask:
-    radial-gradient(82.29px at 50% calc(100% - 116.1px),#000 99%,#0000 101%) calc(50% - 108px) 0/216px 100%,
-    radial-gradient(82.29px at 50% calc(100% + 62.1px),#0000 99%,#000 101%) 50% calc(100% - 54px)/216px 100% repeat-x;
+    radial-gradient(100.8px at 50% calc(100% - 141px),#000 99%,#0000 101%) calc(50% - 120px) 0/240px 100%,
+    radial-gradient(100.8px at 50% calc(100% + 81px),#0000 99%,#000 101%) 50% calc(100% - 60px)/240px 100% repeat-x;
   -webkit-mask: var(--mask);
           mask: var(--mask);
   .left-container {

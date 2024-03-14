@@ -6,10 +6,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    color: $primary-color;
+    color: $third-color;
     font-size: 15px;
     width: 100%;
-    background-color: $secondary-color;
+    background-color: $primary-color;
     @include mq(m) {
         font-size: 20px;
     }
@@ -17,7 +17,7 @@
         width: 80%;
         a {
           text-decoration: none;
-          color: $primary-color;
+          color: $secondary-color;
           font-weight: 900;
           &:hover {
             font-size: 19px;
@@ -33,7 +33,7 @@
             color: $third-color;
             margin-right: 10px;
             &:hover{
-              color: $primary-color;
+              color: $fifth-color;
             }
           }
         }

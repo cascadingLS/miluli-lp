@@ -2,18 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $third-color; //mudar conforme necessidade
     padding-top: 35px;
+    font-family: "Righteous", sans-serif;
     font-size: 25px;
+    background: linear-gradient(180deg, rgba(38, 37, 118, 0.9)90%, rgba(38, 37, 118, 0.9) 90.54%), url('../../../assets/bg-hero.jpg');
+    --mask:
+    radial-gradient(100.8px at 50% 141px,#000 99%,#0000 101%) calc(50% - 120px) 0/240px 100%,
+    radial-gradient(100.8px at 50% -81px,#0000 99%,#000 101%) 50% 60px/240px 100% repeat-x;
+    -webkit-mask: var(--mask);
+          mask: var(--mask);
+
   
     .title {
       font-size: 40px;
       margin-bottom: 30px;
+      margin-top: 60px;
+      color: $fifth-color;
 
   
       @include mq(m) {
         font-size: 50px;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
       }
     }
   
@@ -27,6 +36,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
+        color: $fifth-color;
         width: 86%;
         @include mq(m) {
             width: 40%;
@@ -35,6 +45,8 @@
 
         .input {
           height: 28px;
+          color: $primary-color;
+          font-family: "Righteous", sans-serif;
           @include mq(m) {
             height: 40px;
           }
@@ -54,15 +66,17 @@
         border-radius: 10px;
         font-size: 25px;
         color: $third-color;
-        background-color: $secondary-color;
+        font-family: "Righteous", sans-serif;
+        background-color: $fourth-color;
         margin-bottom: 35px;
+        border: none;
         &:hover {
-            background-color: $secondary-color;
-            color: $primary-color;
+            background-color: $hover-fourth-color;
           }
           &:active {
-            background-color: $fifth-color;
-            color: $third-color;
+            background-color: $hover-fourth-color;
+            width: 160px;
+            height: 80px;
           }
       }
     }
