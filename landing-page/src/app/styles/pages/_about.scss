@@ -4,7 +4,7 @@
     text-align: center;
     align-items: center;
     padding-top: 35px;
-
+    font-family: "Righteous", sans-serif;
 
     .text-container {
       display: flex;
@@ -13,6 +13,7 @@
   
       h3 {
         font-size: 40px;
+        color: $primary-color;
         @include mq(m) {
           font-size: 50px;
           margin-bottom: 60px;
@@ -23,12 +24,23 @@
         width: 90%;
         margin: auto;
         margin-top: 10px;
+        color: $primary-color;
+
         font-size: 25px;
         margin-bottom: 80px;
         @include mq(m) {
             width: 50%;
             font-size: 35px;
           }
+      }
+      .mi{
+        color: $secondary-color;
+      }
+      .lu {
+        color: $fifth-color;
+      }
+      .li {
+        color: $fourth-color;
       } 
     }
   }
