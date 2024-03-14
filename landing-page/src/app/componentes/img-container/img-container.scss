@@ -1,0 +1,182 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixin';
+
+.right-container {
+    display: flex;
+    @include mq(m) {
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 100px;
+    }
+    @include mq(l) {
+      width: 60%;
+      padding: 60px 0 30px 60px;  
+      display: flex;
+      flex-direction: column;
+      border-radius: 19px 20% 20%;
+    }
+    .hero-images-top {
+      display: flex;
+      flex-direction: row;
+    }
+    .hero-images-bottom {
+      display: none;
+      @include mq(m) {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        flex-direction: row;
+      }
+    }
+    .rotate-1 {
+      transform: rotate(90deg);
+    }
+
+    .img-hero {
+      width: 100%;
+      @include mq(m) {
+        width: 300px;
+        height: 300px;
+        border-radius: 20%;
+        aspect-ratio:1;
+        display:inline-block;
+        --g: 6px;   /* control the gap */
+        --r: 42px;  /* control the circular shapes */
+        background: 
+          radial-gradient(var(--r) at left 50% bottom var(--r),$secondary-color 95%,#0000),
+          radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%,#0000 95%, $secondary-color) 
+
+            top/100% calc(100% - var(--r)) no-repeat;
+            img {
+              border: 10px solid $secondary-color;
+              border-radius: 20%;
+
+              --g: 6px;   /* control the gap */
+              --r: 42px;  /* control the circular shapes */
+              --_m: 
+                radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%,#0000 95%,#000) 
+                  top/100% calc(100% - var(--r)) no-repeat, 
+                radial-gradient(var(--r) at left 50% bottom var(--r),#000 95%,#0000);
+              -webkit-mask: var(--_m);
+                      mask: var(--_m);
+            
+            }
+      }
+    }
+
+    .right-top-jigsaw {
+      display: none;
+      @include mq(m) {
+        width: 300px;
+        height: 300px;
+        margin-left: 60px;
+        border-radius: 20%;
+        aspect-ratio: 1;
+        display: inline-block;
+        --g: 6px;   /* control the gap */
+        --r: 42px;  /* control the circular shapes */
+        background: 
+          radial-gradient(var(--r) at left 50% bottom var(--r), green 95%, #0000),
+          radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, red) 
+            top/100% calc(100% - var(--r)) no-repeat;
+        transform: rotate(90deg); /* Adiciona rotação de 90 graus */
+        
+        img {
+          border-radius: 20%;
+
+          --g: 6px;   /* control the gap */
+          --r: 42px;  /* control the circular shapes */
+          --_m: 
+            radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, #000) 
+              top/100% calc(100% - var(--r)) no-repeat, 
+            radial-gradient(var(--r) at left 50% bottom var(--r), #000 95%, #0000);
+          -webkit-mask: var(--_m);
+          mask: var(--_m);
+        }
+      }
+    
+      &.right-top-jigsaw {
+        display: none;
+        @include mq(m) {
+          border-radius: 20%;
+          width: 270px; /* Ajuste conforme necessário para encaixar no da direita */
+          height: 300px;
+          aspect-ratio: 1;
+          display: inline-block;
+          --g: 6px;   /* control the gap */
+          --r: 42px;  /* control the circular shapes */
+          background: 
+            radial-gradient(var(--r) at left 50% bottom var(--r), $fourth-color 95%, #0000),
+            radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, $fourth-color) 
+              top/100% calc(100% - var(--r)) no-repeat;
+          transform: rotate(90deg); /* Adiciona rotação de 90 graus */
+          
+          img {
+            border: 10px solid $fourth-color;
+            width: 270px;
+            --g: 6px;   /* control the gap */
+            --r: 42px;  /* control the circular shapes */
+            --_m: 
+              radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, #000) 
+                top/100% calc(100% - var(--r)) no-repeat, 
+              radial-gradient(var(--r) at left 50% bottom var(--r), #000 95%, #0000);
+            -webkit-mask: var(--_m);
+            mask: var(--_m);
+          }
+        }
+      }
+    }
+
+    .right-bottom-jigsaw {
+      display: none;
+      @include mq(m) {
+          border-radius: 20%;
+
+          width: 310px;
+          height: 280px;
+          aspect-ratio: 1;
+          display: inline-block;
+          --g: 6px;   /* control the gap */
+          --r: 42px;  /* control the circular shapes */
+          background: 
+            radial-gradient(var(--r) at left 50% top var(--r), $fifth-color 95%, #0000),
+            radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, red) 
+              bottom/100% calc(100% - var(--r)) no-repeat;
+      
+          img {
+            border: 10px solid $fifth-color;
+            border-radius: 20%;
+
+            --g: 6px;  
+            --r: 42px;
+            --_m: 
+              radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, #000) 
+                bottom/100% calc(100% - var(--r)) no-repeat, 
+              radial-gradient(var(--r) at left 50% top var(--r), #000 95%, #0000);
+            -webkit-mask: var(--_m);
+            mask: var(--_m);
+          }
+        
+      }
+    }
+    .jig-img {
+      width: 100%;
+      @include mq(m) {
+      align-self: center;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      }
+    }
+  }
+  .ukulele {
+    display: none;
+    @include mq(m) {
+      display: flex;
+    width: 200px;
+    align-self: center;
+    justify-self: center;
+    }
+  }
