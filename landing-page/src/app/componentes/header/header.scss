@@ -1,3 +1,6 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixin';
+
 header {
   color: $third-color;
   display: flex;

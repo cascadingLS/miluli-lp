@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './hero.component.html',
-  styleUrl: '../../styles/index.scss'
+  styleUrl: './hero.scss'
 })
 export class HeroComponent {
 
