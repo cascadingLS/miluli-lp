@@ -2,5 +2,23 @@
     "version": 2,
     "rewrites": [
         {"source": "/(.*)", "destination": "/"}
-    ]
+    ],
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist/landing-page" }
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/(.*)",
+        "dest": "/src/index.html"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
   
