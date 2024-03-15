@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "angular.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist/landing-page" }
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+  
