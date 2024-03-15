@@ -4,7 +4,7 @@
 .right-container {
     display: flex;
     @include mq(m) {
-      width: 100%;
+      width: 50%;
       align-items: center;
       flex-direction: column;
       margin-bottom: 100px;
