@@ -1,9 +1,13 @@
-import { Routes } from '@angular/router';
-import { HeaderComponent } from './componentes/header/header.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
 
-export const routes: Routes = [
-    {
-        path: "",
-        component: HeaderComponent
-    }
+const routes: Routes = [
+  { path: '**', component: AppComponent } // Rota wildcard para redirecionar todas as URLs para AppComponent
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
